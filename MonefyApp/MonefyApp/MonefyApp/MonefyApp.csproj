@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{A2447CC8-B5AC-4012-95B4-05EFF51F7D73}</ProjectGuid>
+    <TargetFrameworkProfile />
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MonefyApp</RootNamespace>
+    <AssemblyName>MonefyApp</AssemblyName>
+    <NoWarn>1591</NoWarn>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <RANOREX_BIN_PATH Condition=" '$(RANOREX_BIN_PATH)' == '' ">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Ranorex\Studio', 'InstallDir', null, RegistryView.Registry64, RegistryView.Registry32))\Bin</RANOREX_BIN_PATH>
+    <RanorexTargetsPath>$(RANOREX_BIN_PATH)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
+    <projectdefaultrepository>0b592ea2-ffca-4b1e-a522-db9db360ffab</projectdefaultrepository>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ranorex.Bootstrapper">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core.Resolver">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Cef">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.ChromeWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Delphi">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.FirefoxWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Flex">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Java">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Mobile">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Msaa">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Office">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Qt">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.RawText">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Sap">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Uia">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WebDriver">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Win32">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <id>f21a3d4d-0e06-42c3-bffb-550eb91b9a50</id>
+    </Compile>
+    <Compile Include="ClassFiles\CategoriesOptions.cs">
+      <id>cedae4e1-3e50-43ea-a765-65bd54c4d50a</id>
+    </Compile>
+    <Compile Include="ClassFiles\HomePage.cs">
+      <id>d5a6429e-4c80-498e-b089-642758f9989b</id>
+    </Compile>
+    <Compile Include="ClassFiles\LeftMenu.cs">
+      <id>168a462c-42f8-4284-b71e-8a51d19fdd44</id>
+    </Compile>
+    <Compile Include="ClassFiles\NewTransferScreen.cs">
+      <id>53191b77-0d66-4536-8817-e1a27fd393da</id>
+    </Compile>
+    <Compile Include="ClassFiles\RightMenu.cs">
+      <id>123b0f59-5f0f-46f1-9195-f8c69e40f275</id>
+    </Compile>
+    <Compile Include="MonefyAppRepository.cs">
+      <BoundTo>0b592ea2-ffca-4b1e-a522-db9db360ffab</BoundTo>
+      <DependentUpon>MonefyAppRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>78a42ff0-513d-4268-8903-e6a4a5deccaa</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>baa2f1a9-381e-4bf0-9e2c-597929d5dc5d</id>
+    </Compile>
+    <Compile Include="Recording1.cs">
+      <BoundTo>8cdbc2a9-ebf6-4e40-8c07-0adb26819298</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>bf134d98-da4e-41b9-981e-3229d50203a2</id>
+    </Compile>
+    <Compile Include="Recording1.UserCode.cs">
+      <BoundTo>8cdbc2a9-ebf6-4e40-8c07-0adb26819298</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>6e82076a-de98-48c5-9d7e-d4d72179d1e1</id>
+    </Compile>
+    <Compile Include="TestCases\HomePageTestCases\HomePageTestCases.cs">
+      <id>0dcde854-66d5-4977-afa6-716bc505775e</id>
+    </Compile>
+    <Compile Include="TestCases\NewTransferScreenTestCases\NewTransferScreenTestCases.cs">
+      <id>51e24b9a-84f8-41e2-8f3b-09d251af1f48</id>
+    </Compile>
+    <Compile Include="TestCases\RightMenuOptionsTestCases\RightMenuOptionsTestCases.cs">
+      <id>1b648151-2711-453f-96fe-05b8a5a3714c</id>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <id>c6bff634-f383-4975-87dd-f7c123e6cb4c</id>
+    </None>
+    <None Include="MonefyAppRepository.rximg">
+      <BoundTo>0b592ea2-ffca-4b1e-a522-db9db360ffab</BoundTo>
+      <DependentUpon>MonefyAppRepository.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>48344648-1f07-41f3-ac6e-b079884ccc6e</id>
+    </None>
+    <None Include="MonefyAppRepository.rxrep">
+      <id>0b592ea2-ffca-4b1e-a522-db9db360ffab</id>
+      <repoid>ddfc54bd-928f-41cd-aeb5-ea5fef12effe</repoid>
+      <reporootid>8b724c80-317d-4b05-9ebf-87ce5d5af37d</reporootid>
+    </None>
+    <None Include="Recording1.rxrec">
+      <BoundTo>0b592ea2-ffca-4b1e-a522-db9db360ffab</BoundTo>
+      <id>8cdbc2a9-ebf6-4e40-8c07-0adb26819298</id>
+      <recordtableid>d604b391-5acc-42f1-8c6f-678837e0f4fb</recordtableid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MonefyApp.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>be09d17d-0355-41f8-a8aa-ff5ec4adc062</id>
+    </Content>
+    <Content Include="MonefyApp.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>7cccf9be-4f64-4418-b174-b525b1bcac0f</id>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClassFiles">
+      <id>616c5da2-c68c-4cdf-9f61-9bf522b91e9d</id>
+    </Folder>
+    <Folder Include="TestCases">
+      <id>1e2fd8d9-9afb-4ee0-8c14-62a8db0de542</id>
+    </Folder>
+    <Folder Include="TestCases\HomePageTestCases">
+      <id>3575591b-630d-4eb7-9261-6c492f74fe6e</id>
+    </Folder>
+    <Folder Include="TestCases\RightMenuOptionsTestCases">
+      <id>714efac4-5889-47de-b857-2a366a7b260c</id>
+    </Folder>
+    <Folder Include="TestCases\NewTransferScreenTestCases">
+      <id>e7469006-ee79-45dc-9d84-5717cdf9f59f</id>
+    </Folder>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />
+</Project>
